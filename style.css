@@ -1,1 +1,78 @@
 
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+        }
+
+        .actions a {
+            margin: 0 5px;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn-download {
+            background-color: #4CAF50; /* Warna hijau */
+        }
+
+        .btn-delete {
+            background-color: #f44336; /* Warna merah */
+        }
+
+        .upload-form {
+            margin-bottom: 20px;
+        }
+
+        .upload-form input[type="file"] {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .upload-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .upload-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .message.error {
+            color: red;
+        }
+    </style>
