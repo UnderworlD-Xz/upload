@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
 // Proses delete file
 if (isset($_GET['delete'])) {
-    $file_to_delete = "uploads/" . $_GET['delete'];
+    $file_to_delete = "../" . $_GET['delete'];
     if (file_exists($file_to_delete)) {
         unlink($file_to_delete); // Menghapus file
         $message = "File has been deleted.";
@@ -36,83 +36,6 @@ if (isset($_GET['delete'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload and Manage Files</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .actions {
-            display: flex;
-            justify-content: center;
-        }
-
-        .actions a {
-            margin: 0 5px;
-            padding: 8px 12px;
-            text-decoration: none;
-            color: white;
-            border-radius: 5px;
-        }
-
-        .btn-download {
-            background-color: #4CAF50; /* Warna hijau */
-        }
-
-        .btn-delete {
-            background-color: #f44336; /* Warna merah */
-        }
-
-        .upload-form {
-            margin-bottom: 20px;
-        }
-
-        .upload-form input[type="file"] {
-            padding: 10px;
-            margin-right: 10px;
-        }
-
-        .upload-form input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .upload-form input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        .message {
-            color: green;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .message.error {
-            color: red;
-        }
-    </style>
 </head>
 <body>
 
@@ -141,7 +64,7 @@ if (isset($_GET['delete'])) {
 
         <?php
         // Menampilkan daftar file di folder 'uploads'
-        $dir = "uploads/";
+        $dir = "../";
         if (is_dir($dir)) {
             $files = array_diff(scandir($dir), array('.', '..'));
             $no = 1;
@@ -151,7 +74,7 @@ if (isset($_GET['delete'])) {
                         <td>$file</td>
                         <td class='actions'>
                             <a href='uploads/$file' class='btn-download' download>Download</a>
-                            <a href='index.php?delete=$file' class='btn-delete'>Delete</a>
+                            <a href='../file' class='btn-delete'>Delete</a>
                         </td>
                       </tr>";
                 $no++;
