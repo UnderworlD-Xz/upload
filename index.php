@@ -33,20 +33,6 @@ if (isset($_GET['delete'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File List</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        table { width: 100%; border-collapse: collapse; }
-        table, th, td { border: 1px solid #ddd; }
-        th, td { padding: 10px; text-align: center; }
-        th { background-color: #f2f2f2; }
-        .download-btn { background-color: #4CAF50; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; }
-        .download-btn:hover { background-color: #45a049; }
-        .delete-btn { background-color: #f44336; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; }
-        .delete-btn:hover { background-color: #e53935; }
-        .message { margin: 10px 0; padding: 10px; border-radius: 5px; background-color: #f0f0f0; color: #333; }
-        .message.error { background-color: #f8d7da; color: #721c24; }
-        .actions { display: flex; gap: 10px; justify-content: center; } /* Menambahkan flexbox untuk tata letak tombol */
-    </style>
 </head>
 <body>
 
