@@ -15,7 +15,8 @@ if (isset($_POST['submit'])) {
     }
 }
 if (isset($_GET['delete'])) {
-    $file_to_delete = basename($_GET['delete']); // Hanya ambil nama file saja untuk keamanan
+    $file_to_delete = basename($_GET['delete']); 
+    
     if (file_exists($file_to_delete)) {
         unlink($file_to_delete); // Menghapus file
         $message = "File has been deleted.";
