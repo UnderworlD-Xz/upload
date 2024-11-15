@@ -18,7 +18,7 @@ if (isset($_GET['delete'])) {
     $file_to_delete = basename($_GET['delete']); 
     
     if (file_exists($file_to_delete)) {
-        unlink($file_to_delete); // Menghapus fil
+        unlink($file_to_delete); 
         $message = "File has been deleted.";
     } else {
         $message = "File not found.";
