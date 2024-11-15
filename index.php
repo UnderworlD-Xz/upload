@@ -4,7 +4,6 @@ $message = "";
 if (isset($_POST['submit'])) {
     $target_file = basename($_FILES["fileToUpload"]["name"]); // Menyimpan file di direktori yang sama
     
-    // Cek apakah file sudah ada
     if (file_exists($target_file)) {
         $message = "File already exists.";
     } else {
