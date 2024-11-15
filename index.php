@@ -1,5 +1,4 @@
 <?php
-// Menyimpan pesan sukses/gagal
 $message = "";
 
 if (isset($_POST['submit'])) {
