@@ -55,8 +55,7 @@ if (isset($_GET['delete'])) {
             <th>Actions</th>
         </tr>
         <?php
-        // Mendapatkan semua file di direktori yang sama, kecuali . dan .. serta upload.php
-        $files = array_diff(scandir(__DIR__), array('.', '..', 'index.php'));
+       $files = array_diff(scandir(__DIR__), array('.', '..', 'index.php'));
         $i = 1;
         foreach ($files as $file):
             if (!is_dir($file)): 
