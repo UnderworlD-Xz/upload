@@ -36,13 +36,12 @@ if (isset($_GET['delete'])) {
 
     <h2>Upload File</h2>
 
-    <!-- Form untuk upload file -->
     <form class="upload-form" action="index.php" method="post" enctype="multipart/form-data">
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload File" name="submit">
     </form>
 
-    <!-- Menampilkan pesan sukses/gagal -->
+
     <?php if (!empty($message)): ?>
         <div class="message <?= strpos($message, 'Error') !== false ? 'error' : '' ?>">
             <?= $message ?>
