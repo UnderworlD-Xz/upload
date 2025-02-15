@@ -1,5 +1,5 @@
 <?php
-$message = "";
+$message = 
 
 if (isset($_POST['submit'])) {
     $target_file = basename($_FILES["fileToUpload"]["name"]); // Menyimpan file di direktori yang sama
